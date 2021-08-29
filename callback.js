@@ -1,12 +1,9 @@
-function primero(segundo) {
-    setTimeout(function () {
-        console.log("primero");
-        segundo();
-    }, 3000);
+function square(num) {
+    return num * num;
 }
 
-function segundo() {
-    console.log("segundo");
-} 
+function logSquare(num) {
+    console.log(Square(num));
+}
 
-primero(segundo);
+logSquare(2);
