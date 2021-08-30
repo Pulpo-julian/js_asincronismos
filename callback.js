@@ -1,9 +1,9 @@
 function square(num) {
-    return num * num;
+    throw new Error;
 }
 
 function logSquare(num) {
-    console.log(Square(num));
+    console.log(square(num));
 }
 
 logSquare(2);
