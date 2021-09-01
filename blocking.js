@@ -2,32 +2,36 @@ const btnClick = document.getElementById("btn-click");
 const numClick = document.getElementById("num-clicks");
 const btnSlow = document.getElementById("btn-slow");
 
-let click = 0;
-
+let clicks = 0;
 btnClick.onclick = () => {
-    numClick.innerHTML = `number of clicks: ${++click}`;
+    numClick.innerHTML = `number of clicks: ${++clicks}`;
 }
 
-const slow = (num) => {
-    const limit = 10_000;
-    for(i=0; i<limit; i++) {
-        for (j = 0; j<limit; j++) {
+const calculate = (num) => {
+    const limite = 8_000;
+    for(i=0; i < limite; i++) {
+        for(j=0; j < limite; j++) {
             num **= 2;
             num = Math.sqrt(num);
         }
     }
+
     return num;
 }
 
 // btnSlow.onclick = () => {
 //     console.time();
-//     console.log(slow(4));
+//     console.log(calculate(3));
 //     console.timeEnd();
 // }
 
 btnSlow.onclick = () => {
-    const nums = [1.5, 2.5, 3.5, 4.5];
-    for(var num of nums) {
-        console.log(slow(num));
+    let datos = [1.5, 2.5, 3.5, 4.5];
+    for(number of datos) {
+        console.time();
+        console.log(calculate(number));
+        console.timeEnd();
     }
 }
+
+
