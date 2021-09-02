@@ -21,11 +21,11 @@ const getPosts = (id) => new Promise((resolve, reject) => {
 });
 
 getUser(1)
-    .then(users => {
-        const user = users[0];
+    .then((users) => {
+        const user = users;
         console.log(user);
         return user;
     })
-    .then(user => getPosts(user.id))
-    .then(posts => console.log(posts))
+    .then((user) => getPosts(user.id))
+    .then((posts)=> console.log(posts))
     .catch(e => console.error(e));
